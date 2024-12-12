@@ -6,6 +6,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
+  base: '/test-task-mindbox',
   plugins: [react()],
   test: {
     globals: true,

@@ -1,0 +1,87 @@
+@use '@/styles/variables' as vars;
+
+.container {
+  position: relative;
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1), -10px 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 1px;
+  background-color: vars.$color-bg;
+  &::after {
+    position: absolute;
+    bottom: -6px;
+    left: 4.5px;
+    content: '';
+    width: 98%;
+    height: 5px;
+    background-color: vars.$color-bg;
+    border-bottom: 1px solid vars.$color-faint;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1), -10px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &::before {
+    position: absolute;
+    bottom: -11px;
+    left: 9.5px;
+    content: '';
+    width: 96%;
+    height: 5px;
+    background-color: vars.$color-bg;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1), -10px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .noTodos {
+    padding: 20px;
+    border-bottom: 1px solid vars.$color-faint;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    .text {
+      font-size: 27px;
+      color: vars.$color-main;
+    }
+
+    .emoji {
+      color: vars.$color-main;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .todosWrapper {
+    list-style: none;
+    max-height: 350px;
+    overflow-y: auto;
+    .item {
+      border-bottom: 0.5px solid vars.$color-faint;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 12px;
+    background-color: vars.$color-bg;
+    color: vars.$color-medium;
+    border-bottom: 1px solid vars.$color-faint;
+
+    .itemsState {
+      display: flex;
+      gap: 9px;
+      list-style: none;
+    }
+
+    .footerBtn {
+      padding: 3px;
+      border: none;
+      cursor: pointer;
+      color: vars.$color-medium;
+
+      &.active {
+        border: 1px solid vars.$color-medium;
+        border-radius: 5px;
+      }
+    }
+  }
+}

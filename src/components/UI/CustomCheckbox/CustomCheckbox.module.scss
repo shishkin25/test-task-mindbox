@@ -1,0 +1,37 @@
+@use '@/styles/variables' as vars;
+
+.container {
+  width: 25px;
+  height: 25px;
+  position: relative;
+
+  &:focus-within {
+    .noArrow,
+    .arrow {
+      transform: scale(1.1);
+    }
+  }
+
+  .arrow,
+  .noArrow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .arrow {
+    color: green;
+  }
+
+  .noArrow {
+    color: vars.$color-faint;
+  }
+
+  .input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+}

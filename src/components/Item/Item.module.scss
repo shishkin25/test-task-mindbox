@@ -1,0 +1,35 @@
+@use '@/styles/variables' as vars;
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 5px;
+  background-color: vars.$color-bg;
+  font-size: 20px;
+  color: vars.$color-main;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: vars.$color-main;
+    border-radius: 5px;
+    border: 2px solid vars.$color-bg;
+  }
+
+  .checkboxWrapper {
+    flex-shrink: 1;
+  }
+
+  &.completed {
+    text-decoration: line-through;
+    color: vars.$color-faint;
+  }
+}

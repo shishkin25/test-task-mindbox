@@ -1,0 +1,24 @@
+@use '@/styles/variables' as vars;
+
+.container {
+  width: 500px;
+
+  .addTaskWrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .inputWrapper {
+      width: 79.7%;
+    }
+
+    .buttonWrapper {
+      width: 20%;
+    }
+  }
+
+  .title {
+    font-size: 90px;
+    color: vars.$color-bg;
+    text-align: center;
+  }
+}

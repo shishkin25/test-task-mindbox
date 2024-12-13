@@ -25,6 +25,12 @@ const MainContent = () => {
     }
   };
 
+  const handleEnterPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleAddTodo();
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.title}>todos</div>
@@ -34,6 +40,7 @@ const MainContent = () => {
             placeholderText="What needs to be done?"
             value={inputValue}
             onChange={handleChangeInput}
+            onKeyDown={handleEnterPress}
           />
         </div>
         <div className={styles.buttonWrapper}>

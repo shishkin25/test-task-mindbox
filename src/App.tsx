@@ -3,11 +3,9 @@ import MainContent from './components/MainContent';
 
 function App() {
   return (
-    <>
-      <Background>
-        <MainContent />
-      </Background>
-    </>
+    <Background>
+      <MainContent />
+    </Background>
   );
 }
 export default App;

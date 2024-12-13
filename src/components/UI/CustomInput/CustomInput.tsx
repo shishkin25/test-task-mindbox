@@ -10,6 +10,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
   placeholderText,
   value,
   onChange,
+  onKeyDown,
   ...props
 }) => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -29,6 +30,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
         placeholder={placeholderText}
         value={value}
         onChange={onChange}
+        onKeyDown={onKeyDown}
         {...props}
         ref={inputRef}
       />

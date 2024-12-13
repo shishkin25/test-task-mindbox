@@ -37,7 +37,7 @@ const MainContent = () => {
           />
         </div>
         <div className={styles.buttonWrapper}>
-          <CustomButton text="Добавить" onClick={handleAddTodo} />
+          <CustomButton text="Add" onClick={handleAddTodo} />
         </div>
       </div>
       <Todos />
